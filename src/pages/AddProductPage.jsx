@@ -62,11 +62,11 @@ const AddProductPage = () => {
         console.warn("Could not read seller profile:", err);
       }
 
-      // upload image
-      const path = `products/${user.uid}/${Date.now()}_${imageFile.name}`;
-      const storageRef = ref(storage, path);
-      await uploadBytes(storageRef, imageFile);
-      const imageUrl = await getDownloadURL(storageRef);
+      // // upload image
+      // const path = `products/${user.uid}/${Date.now()}_${imageFile.name}`;
+      // const storageRef = ref(storage, path);
+      // await uploadBytes(storageRef, imageFile);
+      // const imageUrl = await getDownloadURL(storageRef);
 
       // create product doc
       await addDoc(collection(db, "products"), {
@@ -74,8 +74,8 @@ const AddProductPage = () => {
         description: form.description,
         category: form.category,
         price: form.price,
-        imageUrl,
-        imagePath: path,
+        // imageUrl,
+        // imagePath: path,
         sellerId: user.uid,
         sellerPhone, // used for whatsapp link
         createdAt: serverTimestamp(),
@@ -126,7 +126,7 @@ const AddProductPage = () => {
               name="category"
               value={form.category}
               onChange={handleChange}
-              className="w-full border px-3 py-2 rounded"
+              className="w-full border bg-cyan-900 px-3 py-2 rounded"
             >
               {categories.map((c) => (
                 <option key={c} value={c}>

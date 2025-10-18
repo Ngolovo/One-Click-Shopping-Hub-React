@@ -27,6 +27,7 @@ const LandingPage = () => {
   if (loading) return <Loader />;
 
   return (
+    <>
     <div className=" flex justify-between items-center flex-col">
       <Navbar />
       <main className="flex-grow px-6 py-10">
@@ -49,8 +50,10 @@ const LandingPage = () => {
           </div>
         ))}
       </main>
-      <Footer />
+      
     </div>
+    <Footer />
+    </>
   );
 };
 

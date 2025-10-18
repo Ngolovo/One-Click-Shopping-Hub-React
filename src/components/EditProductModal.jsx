@@ -64,7 +64,7 @@ const EditProductModal = ({ isOpen, onClose, product, onSave }) => {
             transition={{ duration: 0.18 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl p-6">
+            <div className="w-full max-w-lg text-amber-950 bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-3">Edit Product</h3>
 
               <form onSubmit={handleSubmit} className="space-y-3">
@@ -114,7 +114,7 @@ const EditProductModal = ({ isOpen, onClose, product, onSave }) => {
                   <button
                     type="button"
                     onClick={onClose}
-                    className="px-4 py-2 bg-gray-200 rounded"
+                    className="px-4 py-2 bg-gray-200 text-white rounded"
                     disabled={busy}
                   >
                     Cancel

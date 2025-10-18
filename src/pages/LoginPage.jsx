@@ -26,8 +26,8 @@ const LoginPage = () => {
 
   return (
     <>
-      <Navbar />
-      <div className="flex flex-col place-items-center justify-center min-w-screen py-10 mt-0">
+      <Navbar  />
+      <div className=" flex-grow place-items-center justify-center min-w-screen py-10 mt-0">
         <h1 className="text-3xl font-bold mb-6">Seller Login</h1>
         <form
           onSubmit={handleLogin}

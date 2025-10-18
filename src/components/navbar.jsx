@@ -12,7 +12,7 @@ const Navbar = ({ user }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full justify-center min-w-screen bg-orange-400 text-white px-9 py-8 mt-0">
+    <nav className="  w-full justify-center min-w-screen bg-orange-400 text-white px-9 py-8 mt-0">
       <Link to="/" className="text-4xl font-bold">One Click Shopping Hub</Link>
       <div className="flex space-x-4">
         {!user ? (
